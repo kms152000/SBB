@@ -1,9 +1,15 @@
 package com.mysite.sbb;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
+@Getter
+@Setter
 public class Question {
 
     @Id
@@ -17,4 +23,7 @@ public class Question {
     private String content;
 
     private LocalDateTime createDate;
+
+    @OneToMany
+    private List<Answer> ansewers;
 }

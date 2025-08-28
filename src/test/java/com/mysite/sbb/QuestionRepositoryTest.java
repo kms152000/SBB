@@ -128,7 +128,7 @@ class QuestionRepositoryTest {
         Question q2 = questionRepository.findById(2).get();
         System.out.println("q2.getSubject() = " + q2.getSubject());
         // Answer answer = q2.getAnswers().get(0);
-
-        // System.out.println("answer = " + answer.getContent());
+        Answer answer = q2.getAnswers().get(0);
+        System.out.println("answer = " + answer.getContent());
     }
 }
